@@ -1,14 +1,14 @@
 {
     "clients": {
         "pirl": {
-            "version": "0.0.1",
+            "version": "1.0.0",
             "platforms": {
                 "linux": {
                     "x64": {
                         "download": {
                             "url": "https://github.com/pirl/pirl/releases/download/1.0.0/pirl_linux_1.0.0.tar.gz",
                             "type": "tar",
-                            "md5": "d5331a9ba124778d6d1341baba56ef11",
+                            "md5": "cbf3f0647719f482b35928ee2949acce",
                             "bin": "bin/pirl"
                         },
                         "bin": "pirl"

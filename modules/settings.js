@@ -179,7 +179,7 @@ class Settings {
     }
 
     get appName() {
-        return this.uiMode === 'mist' ? 'Mist' : 'Pirl Wallet';
+        return this.uiMode === 'mist' ? 'Mist' : 'Pirl';
     }
 
     get appLicense() {

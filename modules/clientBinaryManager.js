@@ -189,7 +189,7 @@ class Manager extends EventEmitter {
 
             return mgr.init({
                 folders: [
-                    path.join(Settings.userDataPath, 'binaries', 'Pirl', 'unpacked'),
+                    path.join(Settings.userDataPath, 'binaries', 'pirl', 'unpacked'),
                 ],
             })
             .then(() => {

@@ -13,10 +13,10 @@ const clientBinaries = require('../clientBinaries.json');
 
 
 gulp.task('update-nodes', (cb) => {
-    const clientBinariesPirl = clientBinaries.clients.Pirl;
+    const clientBinariesPirl = clientBinaries.clients.pirl;
     const localPirlVersion = clientBinariesPirl.version;
     const newJson = clientBinaries;
-    const pirl = newJson.clients.Pirl;
+    const pirl = newJson.clients.pirl;
 
     // Query latest pirl version
     got('https://api.github.com/repos/pirl/pirl/releases/latest', { json: true })

@@ -9,7 +9,7 @@
                             "url": "https://github.com/pirl/pirl/releases/download/1.0.0/pirl_linux_1.0.0.tar.gz",
                             "type": "tar",
                             "md5": "cbf3f0647719f482b35928ee2949acce",
-                            "bin": "bin/pirl"
+                            "bin": "pirl"
                         },
                         "bin": "pirl"
                     }

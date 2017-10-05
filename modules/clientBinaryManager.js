@@ -45,7 +45,7 @@ class Manager extends EventEmitter {
     }
 
     _checkForNewConfig(restart) {
-        const nodeType = 'Pirl';
+        const nodeType = 'pirl';
         let binariesDownloaded = false;
         let nodeInfo;
 

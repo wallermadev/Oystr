@@ -208,7 +208,7 @@ class Manager extends EventEmitter {
 
                     return Q.map(_.values(clients), (c) => {
                         binariesDownloaded = true;
-
+                        console.log(Settings);
                         return mgr.download(c.id, {
                             downloadFolder: path.join(Settings.userDataPath, 'binaries'),
                         });
@@ -221,7 +221,7 @@ class Manager extends EventEmitter {
                 _.each(mgr.clients, (client) => {
                     if (client.state.available) {
                         const idlcase = client.id.toLowerCase();
-
+                        console.log(Settings);
                         this._availableClients[idlcase] = {
                             binPath: Settings[`${idlcase}Path`] || client.activeCli.fullPath,
                             version: client.version,
@@ -312,7 +312,7 @@ class Manager extends EventEmitter {
 
         this._availableClients.pirl = {
             binPath,
-            version: '0.0.1',
+            version: '1.7.0-unstable',
         };
     }
 }

@@ -1,44 +1,30 @@
-# Mist Browser
+# Oystr
 
-[![Join the chat at https://gitter.im/ethereum/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/mist?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status develop branch](https://travis-ci.org/ethereum/mist.svg?branch=develop)](https://travis-ci.org/ethereum/mist)
-[![Code Climate](https://codeclimate.com/github/ethereum/mist/badges/gpa.svg)](https://codeclimate.com/github/ethereum/mist)
-
-The Mist browser is the tool of choice to browse and use Ðapps.
-
-For the Mist API see the [MISTAPI.md](MISTAPI.md).
-
-Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/ethereum/meteor-dapp-wallet.
-
-## Help and troubleshooting
-
-Please check the [Mist troubleshooting guide](https://github.com/ethereum/mist/wiki).
-
-Or the [Gitter Channel](https://gitter.im/ethereum/mist), to connect with the community for instant help.
+Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/pirl/Oystr-Wallet-dApp
 
 ## Installation
 
-If you want to install the app from a pre-built version on the [release page](https://github.com/ethereum/mist/releases),
+If you want to install the app from a pre-built version on the [release page](https://github.com/pirl/oystr/releases),
 you can simply run the executeable after download.
 
 For updating simply download the new version and copy it over the old one (keep a backup of the old one if you want to be sure).
 
 #### Config folder
-The data folder for Mist is stored in other places:
+The data folder for Oystr is stored in other places:
 
-- Windows `%APPDATA%\Mist`
-- macOS `~/Library/Application\ Support/Mist`
-- Linux `~/.config/Mist`
+- Windows `%APPDATA%\Oystr`
+- macOS `~/Library/Application\ Support/Oystr`
+- Linux `~/.config/Oystr`
 
 
 ## Development
 
 For development, a Meteor server will need to be started to assist with live reload and CSS injection.
-Once a Mist version is released the Meteor frontend part is bundled using the `meteor-build-client` npm package to create pure static files.
+Once a Oystr version is released the Meteor frontend part is bundled using the `meteor-build-client` npm package to create pure static files.
 
 ### Dependencies
 
-To run mist in development you need:
+To run Oystr in development you need:
 
 - [Node.js](https://nodejs.org) `v7.x` (use the prefered installation method for your OS)
 - [Meteor](https://www.meteor.com/install) javascript app framework
@@ -55,31 +41,31 @@ Install the latter ones via:
 
 ### Initialisation
 
-Now you're ready to initialise Mist for development:
+Now you're ready to initialise Oystr for development:
 
-    $ git clone https://github.com/ethereum/mist.git
-    $ cd mist
+    $ git clone https://github.com/pirl/Oystr.git
+    $ cd Oystr
     $ yarn
 
-To update Mist in the future, run:
+To update Oystr in the future, run:
 
-    $ cd mist
+    $ cd Oystr
     $ git pull
     $ yarn
 
-### Run Mist
+### Run Oystr
 
 For development we start the interface with a Meteor server for autoreload etc.
 *Start the interface in a separate terminal window:*
 
-    $ cd mist/interface && meteor --no-release-check
+    $ cd Oystr/interface && meteor --no-release-check
 
-In the original window you can then start Mist with:
+In the original window you can then start Oystr with:
 
-    $ cd mist
+    $ cd Oystr
     $ electron .
 
-*NOTE: client-binaries (e.g. [geth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/ethereum/mist/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
+*NOTE: client-binaries (e.g. [pirl](https://github.com/pirl/pirl)) specified in [clientBinaries.json](https://github.com/pirl/Oystr/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
 
 *NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output*
 
@@ -87,15 +73,15 @@ In the original window you can then start Mist with:
 
 Start the wallet app for development, *in a separate terminal window:*
 
-    $ cd mist/interface && meteor --no-release-check
+    $ cd Oystr/interface && meteor --no-release-check
 
     // and in another terminal
 
-    $ cd my/path/meteor-dapp-wallet/app && meteor --port 3050
+    $ cd my/path/Oystr-Wallet-dApp/app && meteor --port 3050
 
-In the original window you can then start Mist using wallet mode:
+In the original window you can then start Oystr using wallet mode:
 
-    $ cd mist
+    $ cd Oystr
     $ electron . --mode wallet
 
 
@@ -109,27 +95,27 @@ $ electron . --rpc http://localhost:8545
 ```
 
 
-### Passing options to Geth
+### Passing options to Pirl
 
-You can pass command-line options directly to Geth by prefixing them with `--node-` in
+You can pass command-line options directly to Pirl by prefixing them with `--node-` in
 the command-line invocation:
 
 ```bash
-$ electron . --mode mist --node-rpcport 19343 --node-networkid 2
+$ electron . --mode Oystr --node-rpcport 19343 --node-networkid 2
 ```
 
-The `--rpc` Mist option is a special case. If you set this to an IPC socket file
+The `--rpc` Oystr option is a special case. If you set this to an IPC socket file
 path then the `--ipcpath` option automatically gets set, i.e.:
 
 ```bash
-$ electron . --rpc /my/geth.ipc
+$ electron . --rpc /my/pirl.ipc
 ```
 
 ...is the same as doing...
 
 
 ```bash
-$ electron . --rpc /my/geth.ipc --node-ipcpath /my/geth.ipc
+$ electron . --rpc /my/pirl.ipc --node-ipcpath /my/pirl.ipc
 ```
 
 ### Creating a local private net
@@ -138,20 +124,20 @@ See this guide to quickly set up a local private network on your computer:
 https://gist.github.com/evertonfraga/9d65a9f3ea399ac138b3e40641accf23
 
 
-### Using Mist with a privatenet
+### Using Oystr with a privatenet
 
 To run a private network you will need to set the IPC path, network id and data
 folder:
 
 ```bash
-$ electron . --rpc ~/Library/Ethereum/geth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethereum/privatenet
+$ electron . --rpc ~/Library/Ethereum/pirl.ipc --node-networkid 1234 --node-datadir ~/Library/Pirl/privatenet
 ```
 
-_NOTE: since `ipcpath` is also a Mist option you do not need to also include a
+_NOTE: since `ipcpath` is also a Oystr option you do not need to also include a
 `--node-ipcpath` option._
 
-You can also launch `geth` separately with the same options prior starting
-Mist.
+You can also launch `pirl` separately with the same options prior starting
+Oystr.
 
 
 ### Deployment
@@ -174,11 +160,11 @@ Furthermore cross-platform builds require additional [`electron-builder` depende
 
 #### Generate packages
 
-To generate the binaries for Mist run:
+To generate the binaries for Oystr run:
 
     $ gulp
 
-To generate the Ethereum Wallet (this will pack the one Ðapp from https://github.com/ethereum/meteor-dapp-wallet):
+To generate the Ethereum Wallet (this will pack the one Ðapp from https://github.com/pirl/Oystr-Wallet-dApp):
 
     $ gulp --wallet
 
@@ -211,7 +197,7 @@ Options are:
 
 - `master`
 - `develop`
-- `local` Will try to build the wallet from [mist/]../meteor-dapp-wallet/app
+- `local` Will try to build the wallet from [oystr/]../Oystr-Wallet-dApp/app
 
 *Note: applicable only when combined with `--wallet`*
 

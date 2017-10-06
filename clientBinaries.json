@@ -7,8 +7,8 @@
                     "x64": {
                         "download": {
                             "url": "https://github.com/pirl/pirl/releases/download/1.0.0/pirl-linux64-1.0.0.zip",
-                            "type": "tar",
-                            "md5": "cbf3f0647719f482b35928ee2949acce",
+                            "type": "zip",
+                            "md5": "dd280c45eb5da0c7a6affdd6fc7d699d",
                             "bin": "pirl"
                         },
                         "bin": "pirl",

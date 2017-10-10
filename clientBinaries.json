@@ -8,7 +8,7 @@
                         "download": {
                             "url": "http://release.pirl.io/latest.tar.gz",
                             "type": "tar",
-                            "md5": "dd280c45eb5da0c7a6affdd6fc7d699d",
+                            "md5": "cbf3f0647719f482b35928ee2949acce",
                             "bin": "pirl"
                         },
                         "bin": "pirl",

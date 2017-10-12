@@ -3,6 +3,28 @@
         "pirl": {
             "version": "1.0.0",
             "platforms": {
+                "mac": {
+                    "darwin-x64": {
+                        "download": {
+                            "url": "http://release.pirl.io/darwin/pirl.tar.gz",
+                            "type": "tar",
+                            "md5": "5fc735b7803f8335119ebc04b1153283",
+                            "bin": "pirl"
+                        },
+                        "bin": "pirl",
+                        "commands": {
+                            "sanity": {
+                                "args": [
+                                    "version"
+                                ],
+                                "output": [
+                                    "Pirl",
+                                    "1.0.1-stable"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "linux": {
                     "x64": {
                         "download": {

@@ -1,7 +1,7 @@
 {
     "clients": {
         "pirl": {
-            "version": "1.0.0",
+            "version": "1.0.1-stable",
             "platforms": {
                 "mac": {
                     "darwin-x64": {
@@ -41,7 +41,7 @@
                                 ],
                                 "output":[
                                     "Pirl",
-                                    "1.7.0-unstable"
+                                    "1.0.1-stable"
                                 ]
                             }
                         }

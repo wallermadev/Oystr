@@ -6,7 +6,7 @@
                 "mac": {
                     "darwin-x64": {
                         "download": {
-                            "url": "http://release.pirl.io/downloads/pirl/linux/1.0.1/pirl-linux-amd64.tar.gz",
+                            "url": "http://release.pirl.io/darwin/pirl.tar.gz",		
                             "type": "tar",
                             "md5": "5fc735b7803f8335119ebc04b1153283",
                             "bin": "pirl"
@@ -28,7 +28,7 @@
                 "linux": {
                     "x64": {
                         "download": {
-                            "url": "http://release.pirl.io/latest.tar.gz",
+                            "url": "http://release.pirl.io/downloads/pirl/linux/1.0.1/pirl-linux-amd64.tar.gz",
                             "type": "tar",
                             "md5": "cbf3f0647719f482b35928ee2949acce",
                             "bin": "pirl"

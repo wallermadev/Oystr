@@ -1,7 +1,7 @@
 {
     "clients": {
         "pirl": {
-            "version": "1.7.0-unstable",
+            "version": "1.0.1-stable",
             "platforms": {
                 "linux": {
                     "x64": {
@@ -19,7 +19,7 @@
                                 ],
                                 "output":[
                                     "Pirl",
-                                    "1.7.0-unstable"
+                                    "1.0.1-stable"
                                 ]
                             }
                         }

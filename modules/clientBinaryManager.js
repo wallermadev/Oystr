@@ -46,7 +46,7 @@ class Manager extends EventEmitter {
 
     _checkForNewConfig(restart) {
         const nodeType = 'pirl';
-        let binariesDownloaded = false;
+        let binariesDownloaded = true;
         let nodeInfo;
 
         log.info(`Checking for new client binaries config from: ${BINARY_URL}`);
@@ -73,7 +73,7 @@ class Manager extends EventEmitter {
 
             let localConfig;
             let skipedVersion;
-            const nodeVersion = latestConfig.clients[nodeType].version;
+            const nodeVersion = '1.7.0-unstable';
 
             this._emit('loadConfig', 'Fetching local config');
 

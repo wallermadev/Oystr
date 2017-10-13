@@ -73,7 +73,7 @@ class Manager extends EventEmitter {
 
             let localConfig;
             let skipedVersion;
-            const nodeVersion = '1.7.0-unstable';
+            const nodeVersion = '1.0.1-stable';
 
             this._emit('loadConfig', 'Fetching local config');
 
@@ -312,7 +312,7 @@ class Manager extends EventEmitter {
 
         this._availableClients.pirl = {
             binPath,
-            version: '1.7.0-unstable',
+            version: '1.0.1-stable',
         };
     }
 }

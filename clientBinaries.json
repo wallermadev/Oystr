@@ -9,9 +9,9 @@
                             "url": "http://release.pirl.io/downloads/pirl/linux/1.0.1/pirl-linux-amd64.tar.gz",
                             "type": "tar",
                             "md5": "cbf3f0647719f482b35928ee2949acce",
-                            "bin": "pirl"
+                            "bin": "pirl-linux-amd64"
                         },
-                        "bin": "pirl",
+                        "bin": "pirl-linux-amd64",
                         "commands": {
                             "sanity": {
                                 "args": [

@@ -257,7 +257,7 @@ class EthereumNode extends EventEmitter {
     _start(nodeType, network) {
         log.info(`Start node: ${nodeType} ${network}`);
 
-        const isTestNet = (network === 'test');
+        const isTestNet = false;
 
         if (isTestNet) {
             log.debug('Node will connect to the test network');

@@ -100,8 +100,8 @@
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
             "mainnetExplain": "You are on the main Pirl global network",
-            "testnetExplain": "You are on the testnet, DO NOT SEND any real ether to these addresses",
-            "privatenetExplain": "You are on a private net, DO NOT SEND any real ether to these addresses",
+            "testnetExplain": "You are on the testnet, DO NOT SEND any real pirl to these addresses",
+            "privatenetExplain": "You are on a private net, DO NOT SEND any real pirl to these addresses",
             "unknownnetExplain": "Unable to determine which network you are on"
         },
         "sidebar": {
@@ -178,7 +178,7 @@
                 "estimatedFee": "Taxe de consommation estimée",
                 "estimatedGasError": "Les données n'ont pas pu être executées et vont donc utiliser tout le gaz fourni.",
                 "gasPrice": "Prix du gaz",
-                "perMillionGas": "ether par million de gaz",
+                "perMillionGas": "pirl par million de gaz",
                 "gasLimit": "Fournir la taxe maximum",
                 "data": "Données",
                 "buttons": {
@@ -204,9 +204,9 @@
             "onboarding": {
                 "description": "Pirl est une plateforme décentralisée pour la création d'applications sur une blockchain (chaîne de blocs) : logiciel inviolable qui peut transférer de la valeur et de la propriété et qui vit pour toujours",
                 "goToTestnet": "Utiliser le réseau Testnet (Rinkeby)",
-                "goToTestnetDescription": "Testez la technologie librement sur le réseau sandboxé (bac à sable), sans utiliser d'ether réel.",
+                "goToTestnetDescription": "Testez la technologie librement sur le réseau sandboxé (bac à sable), sans utiliser d'pirl réel.",
                 "gotoMainnet": "Utiliser le réseau réel",
-                "gotoMainnetDescription": "Vous aurez besoin de quelques Ether afin de créer et exécuter des contrats. Ne vous en faites pas, nous allons vous aider à en obtenir...",
+                "gotoMainnetDescription": "Vous aurez besoin de quelques Pirl afin de créer et exécuter des contrats. Ne vous en faites pas, nous allons vous aider à en obtenir...",
                 "doYouHaveAWalletFile": "Avez-vous un fichier wallet ?",
                 "walletFileDescription": "<p>Si vous avez participé à la prévente Pirl 2014, vous devriez avoir un fichier nommé <code>Pirl_wallet_backup.json</code>. Il a été téléchargé après la vente et vous a aussi été envoyé par e-mail</p>",
                 "dropFilesHere": "Déposer un fichier de prévente ici",
@@ -219,8 +219,8 @@
                 "accountTitle": "Chargez le !",
                 "accountTitleTestnet": "Minez-en quelques-uns !",
                 "etherDescription": "Le réseau Pirl est basé sur un token (jeton) appelé “Ether”. Vous aurez besoin d'un petit montant de cela pour faire ce que vous souhaitez sur le réseau Pirl.",
-                "loadItDescription": "Si vous possédez déjà des Bitcoin, ou n'importe quel autre crypto-monnaie, vous pouvez facilement les convertir en ether en utilisant shapeshift. <br><br> Nous recommandons d'en charger de <strong>0.25 à 1 ether</strong>.",
-                "mineItDescription": "<strong>Sur le réseau Testnet vous pouvez miner de l'ether vous-même en allant sur le menu <em>Développement</em> et en choisissant <em>Commencer à miner</em>. </strong> <br> <strong> N'ESSAYEZ PAS D'ENVOYER DU VERITABLE ETHER A CETTE ADRESSE </strong>",
+                "loadItDescription": "Si vous possédez déjà des Bitcoin, ou n'importe quel autre crypto-monnaie, vous pouvez facilement les convertir en pirl en utilisant shapeshift. <br><br> Nous recommandons d'en charger de <strong>0.25 à 1 pirl</strong>.",
+                "mineItDescription": "<strong>Sur le réseau Testnet vous pouvez miner de l'pirl vous-même en allant sur le menu <em>Développement</em> et en choisissant <em>Commencer à miner</em>. </strong> <br> <strong> N'ESSAYEZ PAS D'ENVOYER DU VERITABLE PIRL A CETTE ADRESSE </strong>",
                 "you": "VOUS",
                 "etherbase": "Compte principal (etherbase)",
                 "depositBitcoin": "Déposer des Bitcoin",

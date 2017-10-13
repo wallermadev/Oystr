@@ -4,7 +4,7 @@
 
 **Read the existing issues first, and also search in the closed issues. You may find yours already.**
 
-To help make Mist (Ethereum Wallet) better please file issue with the following basic descriptions:
+To help make Mist (Pirl Wallet) better please file issue with the following basic descriptions:
 
 - What do you run? binary from [releases](https://github.com/ethereum/mist/releases) or the development version from the [commandline](https://github.com/ethereum/mist#run-mist)
 - Which version do you used? You can find that in the `VERSION` file in the Mist folder

@@ -12,13 +12,13 @@ const version = require('../package.json').version;
 
 
 const type = options.type;
-const applicationName = (options.wallet) ? 'Wallet' : 'Mist';
+const applicationName = (options.wallet) ? 'PirlOystrLite' : 'PirlOystr';
 
 
 gulp.task('clean-dist', (cb) => {
     return del([
         `./dist_${type}/**/*`,
-        './meteor-dapp-wallet'
+        './Oystr-Wallet-dApp'
     ], cb);
 });
 

@@ -130,7 +130,7 @@ To run a private network you will need to set the IPC path, network id and data
 folder:
 
 ```bash
-$ electron . --rpc ~/Library/Ethereum/pirl.ipc --node-networkid 1234 --node-datadir ~/Library/Pirl/privatenet
+$ electron . --rpc ~/Library/Pirl/pirl.ipc --node-networkid 1234 --node-datadir ~/Library/Pirl/privatenet
 ```
 
 _NOTE: since `ipcpath` is also a Oystr option you do not need to also include a
@@ -164,7 +164,7 @@ To generate the binaries for Oystr run:
 
     $ gulp
 
-To generate the Ethereum Wallet (this will pack the one Ðapp from https://github.com/pirl/Oystr-Wallet-dApp):
+To generate the Pirl Wallet (this will pack the one Ðapp from https://github.com/pirl/Oystr-Wallet-dApp):
 
     $ gulp --wallet
 

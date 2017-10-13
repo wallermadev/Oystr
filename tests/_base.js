@@ -90,7 +90,7 @@ exports.mocha = (_module, options) => {
 
             this.geth = yield startGeth();
 
-            const appFileName = (options.app === 'wallet') ? 'Ethereum Wallet' : 'Mist';
+            const appFileName = (options.app === 'wallet') ? 'Pirl Wallet' : 'Mist';
             const platformArch = `${process.platform}-${process.arch}`;
 
             let appPath;
@@ -302,7 +302,7 @@ const Utils = {
         let accounts = this.web3.eth.accounts;
 
         let balances = accounts.map(acc =>
-      `${this.web3.fromWei(this.web3.eth.getBalance(acc), 'ether')}`
+      `${this.web3.fromWei(this.web3.eth.getBalance(acc), 'pirl')}`
     );
 
         accounts = accounts.map(a => a.toLowerCase());

@@ -90,4 +90,3 @@ gulp.task('uploadQueue', (cb) => {
 
     runSeq.apply(null, _.flatten([tasks, cb]));
 });
-

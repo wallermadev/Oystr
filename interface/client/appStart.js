@@ -20,8 +20,8 @@ mistInit = function () {
 
             Tabs.insert({
                 _id: 'browser',
-                url: 'https://ethereum.org',
-                redirect: 'https://ethereum.org',
+                url: 'https://pirl.io',
+                redirect: 'https://pirl.io',
                 position: 0
             });
         } else {
@@ -38,8 +38,8 @@ mistInit = function () {
             { _id: 'wallet' },
             {
                 $set: {
-                    url: 'https://wallet.ethereum.org',
-                    redirect: 'https://wallet.ethereum.org',
+                    url: 'https://Oystr.pirl.io',
+                    redirect: 'https://Oystr.pirl.io',
                     position: 1,
                     permissions: {
                         admin: true

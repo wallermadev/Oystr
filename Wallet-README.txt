@@ -1,6 +1,6 @@
-Ethereum Wallet
+Pirl Wallet
 
-The Ethereum wallet, which allows you to create simple and multisig wallets to manage your ether.
+The Pirl wallet, which allows you to create simple and multisig wallets to manage your pirl.
 
 The wallet contains its own node, but can also use an already running one, if the IPC path of that node is the standard path.
 (See below)
@@ -9,11 +9,11 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/Ethereum/geth.ipc` on linux `~/.ethereum/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/Pirl/geth.ipc` on linux `~/.ethereum/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
-    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/Ethereum/geth.ipc
+    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/Pirl/geth.ipc
 
 
 
@@ -25,7 +25,7 @@ which will be used by the wallet contracts you create.
 The point of the original wallet is that wallet contract creation is cheaper,
 as not the full code has to be deployed for every wallet.
 
-You need to make sure that the account displayed for the original wallet creation is unlocked and has at least 1 ether.
+You need to make sure that the account displayed for the original wallet creation is unlocked and has at least 1 pirl.
 
 
 ## Paths
@@ -38,8 +38,8 @@ The wallet (Mist) stores its data at:
 - Linux: ~/.config/Mist
 
 The nodes data is stored at:
-- Mac: ~/Library/Ethereum
-- Windows: %APPDATA%\Roaming\Ethereum
+- Mac: ~/Library/Pirl
+- Windows: %APPDATA%\Roaming\Pirl
 - Linux: ~/.ethereum
 
 

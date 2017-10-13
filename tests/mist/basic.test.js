@@ -6,8 +6,8 @@ const test = require('../_base').mocha(module, {
     app: 'mist',
 });
 
-test['Check for Mist title'] = function* () {
-    (yield this.client.getTitle()).should.eql('Mist');
+test['Check for Oystr title'] = function* () {
+    (yield this.client.getTitle()).should.eql('mist');
 };
 
 test['Sanity Check: main window is focused'] = function* () {

@@ -119,7 +119,8 @@ let menuTempl = function (webviews) {
         );
     }
     fileMenu.push(
-        { label: i18n.t('mist.applicationMenu.app.quit', { app: Settings.appName }),
+        {
+            label: i18n.t('mist.applicationMenu.app.quit', { app: Settings.appName }),
             accelerator: 'CommandOrControl+Q',
             click() {
                 app.quit();
@@ -176,15 +177,15 @@ let menuTempl = function (webviews) {
                                     userPath += '/.web3/keys';
                                 }
 
-                            // geth
+                                // geth
                             } else {
                                 if (process.platform === 'darwin') {
                                     userPath += '/Library/Pirl/keystore';
                                 }
 
                                 if (process.platform === 'freebsd' ||
-                                process.platform === 'linux' ||
-                                process.platform === 'sunos') {
+                                    process.platform === 'linux' ||
+                                    process.platform === 'sunos') {
                                     userPath += '/.ethereum/keystore';
                                 }
 
@@ -235,7 +236,7 @@ let menuTempl = function (webviews) {
                     }
                 }
             }]
-        });
+    });
 
     // EDIT
     menu.push({
@@ -282,7 +283,7 @@ let menuTempl = function (webviews) {
         try {
             // update i18next instance in browserWindow (Mist meteor interface)
             browserWindow.webContents.executeJavaScript(
-               `TAPi18n.setLanguage("${langCode}");`
+                `TAPi18n.setLanguage("${langCode}");`
             );
 
             // set Accept_Language header
@@ -308,23 +309,23 @@ let menuTempl = function (webviews) {
 
     const currentLanguage = Settings.language;
     const languageMenu = Object.keys(i18n.options.resources)
-    .filter(langCode => langCode !== 'dev')
-    .map((langCode) => {
-        const menuItem = {
-            label: i18n.t(`mist.applicationMenu.view.langCodes.${langCode}`),
-            type: 'checkbox',
-            checked: (langCode === currentLanguage),
-            click: switchLang(langCode),
-        };
-        return menuItem;
-    });
+        .filter(langCode => langCode !== 'dev')
+        .map((langCode) => {
+            const menuItem = {
+                label: i18n.t(`mist.applicationMenu.view.langCodes.${langCode}`),
+                type: 'checkbox',
+                checked: (langCode === currentLanguage),
+                click: switchLang(langCode),
+            };
+            return menuItem;
+        });
 
     languageMenu.unshift({
         label: i18n.t('mist.applicationMenu.view.default'),
         click: switchLang(i18n.getBestMatchedLangCode(app.getLocale())),
     }, {
-        type: 'separator',
-    });
+            type: 'separator',
+        });
 
     // VIEW
     menu.push({
@@ -377,7 +378,7 @@ let menuTempl = function (webviews) {
             });
         });
 
-    // wallet
+        // wallet
     } else {
         devtToolsSubMenu = [{
             label: i18n.t('mist.applicationMenu.develop.devToolsWalletUI'),
@@ -498,79 +499,8 @@ let menuTempl = function (webviews) {
                 click() {
                     restartNode(ethereumNode.type, 'main');
                 },
-            },
-            {
-                label: 'Ropsten - Test network',
-                accelerator: 'CommandOrControl+Shift+2',
-                checked: ethereumNode.isOwnNode && ethereumNode.network === 'test',
-                enabled: ethereumNode.isOwnNode && ethereumNode.network !== 'test',
-                type: 'checkbox',
-                click() {
-                    restartNode(ethereumNode.type, 'test');
-                },
-            },
-            {
-                label: 'Rinkeby - Test network',
-                accelerator: 'CommandOrControl+Shift+3',
-                checked: ethereumNode.isOwnNode && ethereumNode.network === 'rinkeby',
-                enabled: ethereumNode.isOwnNode && ethereumNode.network !== 'rinkeby',
-                type: 'checkbox',
-                click() {
-                    restartNode(ethereumNode.type, 'rinkeby');
-                },
-            },
-            {
-                label: 'Solo network',
-                accelerator: 'CommandOrControl+Shift+4',
-                checked: ethereumNode.isOwnNode && ethereumNode.isDevNetwork,
-                enabled: ethereumNode.isOwnNode && !ethereumNode.isDevNetwork,
-                type: 'checkbox',
-                click() {
-                    restartNode(ethereumNode.type, 'dev');
-                },
             }
-        ] });
-
-    devToolsMenu.push({
-        label: (global.mining) ? i18n.t('mist.applicationMenu.develop.stopMining') : i18n.t('mist.applicationMenu.develop.startMining'),
-        accelerator: 'CommandOrControl+Shift+M',
-        enabled: ethereumNode.isOwnNode &&
-                (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork),
-        click() {
-            if (!global.mining) {
-                ethereumNode.send('miner_start', [1])
-                    .then((ret) => {
-                        log.info('miner_start', ret.result);
-
-                        if (ret.result) {
-                            global.mining = true;
-                            createMenu(webviews);
-                        }
-                    })
-                    .catch((err) => {
-                        log.error('miner_start', err);
-                    });
-            } else {
-                ethereumNode.send('miner_stop', [1])
-                    .then((ret) => {
-                        log.info('miner_stop', ret.result);
-
-                        if (ret.result) {
-                            global.mining = false;
-                            createMenu(webviews);
-                        }
-                    })
-                    .catch((err) => {
-                        log.error('miner_stop', err);
-                    });
-            }
-        },
-    });
-
-
-    menu.push({
-        label: ((global.mining) ? '⛏ ' : '') + i18n.t('mist.applicationMenu.develop.label'),
-        submenu: devToolsMenu,
+        ]
     });
 
     // WINDOW
@@ -602,7 +532,7 @@ let menuTempl = function (webviews) {
     const helpMenu = [];
 
     if (process.platform === 'freebsd' || process.platform === 'linux' ||
-            process.platform === 'sunos' || process.platform === 'win32') {
+        process.platform === 'sunos' || process.platform === 'win32') {
         helpMenu.push(
             {
                 label: i18n.t('mist.applicationMenu.app.about', { app: Settings.appName }),
@@ -627,19 +557,19 @@ let menuTempl = function (webviews) {
     helpMenu.push({
         label: i18n.t('mist.applicationMenu.help.mistWiki'),
         click() {
-            shell.openExternal('https://github.com/ethereum/mist/wiki');
+            shell.openExternal('https://github.com/pirl/oystr/wiki');
         },
     }, {
-        label: i18n.t('mist.applicationMenu.help.gitter'),
-        click() {
-            shell.openExternal('https://gitter.im/ethereum/mist');
-        },
-    }, {
-        label: i18n.t('mist.applicationMenu.help.reportBug'),
-        click() {
-            shell.openExternal('https://github.com/ethereum/mist/issues');
-        },
-    });
+            label: i18n.t('mist.applicationMenu.help.gitter'),
+            click() {
+                shell.openExternal('https://gitter.im/pirl/oystr');
+            },
+        }, {
+            label: i18n.t('mist.applicationMenu.help.reportBug'),
+            click() {
+                shell.openExternal('https://github.com/pirl/oystr/issues');
+            },
+        });
 
     menu.push({
         label: i18n.t('mist.applicationMenu.help.label'),

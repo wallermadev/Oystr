@@ -7,7 +7,7 @@ const Web3HttpSocket = require('./sockets/web3Http');
 
 
 /**
- * `Socket` manager.
+ * `Socket` manager.https://github.com/pirl/oystr
  */
 class SocketManager {
     constructor() {

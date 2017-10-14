@@ -27,8 +27,8 @@ RequestExecutionLevel admin
 
 !searchreplace APPNAMENOHYPEN ${APPNAME} "-" " "
 !define GROUPNAME "Pirl"
-!define HELPURL "https://github.com/pirl/mist/releases/issues"
-!define UPDATEURL "https://github.com/pirl/mist/releases"
+!define HELPURL "https://github.com/pirl/oystr/releases/issues"
+!define UPDATEURL "https://github.com/pirl/oystr/releases"
 !define ABOUTURL "https://pirl.io"
 !define /date NOW "%Y%m%d"
 

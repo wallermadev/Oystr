@@ -118,28 +118,6 @@ $ electron . --rpc /my/pirl.ipc
 $ electron . --rpc /my/pirl.ipc --node-ipcpath /my/pirl.ipc
 ```
 
-### Creating a local private net
-
-See this guide to quickly set up a local private network on your computer:
-https://gist.github.com/evertonfraga/9d65a9f3ea399ac138b3e40641accf23
-
-
-### Using Oystr with a privatenet
-
-To run a private network you will need to set the IPC path, network id and data
-folder:
-
-```bash
-$ electron . --rpc ~/Library/Pirl/pirl.ipc --node-networkid 1234 --node-datadir ~/Library/Pirl/privatenet
-```
-
-_NOTE: since `ipcpath` is also a Oystr option you do not need to also include a
-`--node-ipcpath` option._
-
-You can also launch `pirl` separately with the same options prior starting
-Oystr.
-
-
 ### Deployment
 
 Our build system relies on [gulp](http://gulpjs.com/) and [electron-builder](https://github.com/electron-userland/electron-builder/).

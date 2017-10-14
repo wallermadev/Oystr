@@ -68,7 +68,7 @@ global.i18n = i18n;
 // INTERFACE PATHS
 // - WALLET
 if (Settings.uiMode === 'wallet') {
-    log.info('Starting in Wallet mode');
+    log.info('Starting in Lite mode');
 
     global.interfaceAppUrl = (Settings.inProductionMode)
         ? `file://${__dirname}/interface/wallet/index.html`
@@ -79,7 +79,7 @@ if (Settings.uiMode === 'wallet') {
 
 // - MIST
 } else {
-    log.info('Starting in Mist mode');
+    log.info('Starting in Oystr mode');
 
     let url = (Settings.inProductionMode)
         ? `file://${__dirname}/interface/index.html`

@@ -2,10 +2,10 @@
   "name": "Oystr",
   "version": "0.0.1",
   "license": "GPL-3.0",
-  "author": "Pirl Development Team <mist@pirl.io>",
+  "author": "Mathew 'Wallermadev' Waller <wallermadev@pirl.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pirl/oystr.git"
+    "url": "https://github.com/pirl/oystr/.git"
   },
   "scripts": {
     "postinstall": "cd interface && yarn"

@@ -26,9 +26,5 @@
                 <i class="icon-clock"></i> {{{timeSinceBlock}}}
             </div>
         {{/with}}
-
-        {{#if $neq (TemplateVar.get "network") "mainnet"}}
-          <span class="test-chain danger" title="{{i18n 'mist.nodeInfo.testnetExplain' name=(TemplateVar.get 'networkName')}}">{{TemplateVar.get "networkName"}}</span>
-        {{/if}}
     </div>
 </template>

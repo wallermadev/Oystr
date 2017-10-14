@@ -9,11 +9,11 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/Pirl/geth.ipc` on linux `~/.ethereum/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/Pirl/pirl.ipc` on linux `~/.ethereum/pirl.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
-    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/Pirl/geth.ipc
+    $ pirl --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/Pirl/pirl.ipc
 
 
 
@@ -32,35 +32,34 @@ You need to make sure that the account displayed for the original wallet creatio
 
 The paths which store your wallets database and node are different:
 
-The wallet (Mist) stores its data at:
-- Mac: ~/Library/Application Support/Mist
-- Windows: %APPDATA%\Roaming\Mist
-- Linux: ~/.config/Mist
+The wallet (Oystr) stores its data at:
+- Mac: ~/Library/Application Support/Oystr
+- Windows: %APPDATA%\Roaming\Oystr
+- Linux: ~/.config/Oystr
 
 The nodes data is stored at:
 - Mac: ~/Library/Pirl
 - Windows: %APPDATA%\Roaming\Pirl
-- Linux: ~/.ethereum
+- Linux: ~/.pirl
 
 
 ## Issues
 
 If you find issues or have suggestion, please report them at  
-https://github.com/ethereum/meteor-dapp-wallet/issues
+https://github.com/pirl/oystr-wallet-dapp/issues
 
 
 
 ## Repository
 
 The wallet code can be found at   
-https://github.com/ethereum/meteor-dapp-wallet
+https://github.com/pirl/oystr-wallet-dapp
 
 And the binary application code, which wraps the wallet app can be found at   
-https://github.com/ethereum/mist/tree/wallet
-
+https://github.com/pirl/oystr/
 
 
 ## Bundling the wallet
 
-To bundle the binaries yourself follow the instructions on the mist#wallet readme  
-https://github.com/ethereum/mist/tree/wallet#deployment
+To bundle the binaries yourself follow the instructions on the oystr#wallet readme  
+https://github.com/pirl/oystr/tree/wallet#deployment

@@ -1,13 +1,13 @@
-# Mist API
+# Oystr API
 
-Mist provides an API for dapp developers to use special features only available in Mist.
+Oystr provides an API for dapp developers to use special features only available in Oystr.
 
 ## Note for dapp developers
 
-To make your dapp compatible with other browsers, it is recommended that you check the `mist` object before you use it:
+To make your dapp compatible with other browsers, it is recommended that you check the `oystr` object before you use it:
 
 ```js
-if(typeof mist !== 'undefined') {
+if(typeof oystr !== 'undefined') {
     ...
 }
 ```
@@ -18,11 +18,11 @@ You have three different possibilities to use `web3`:
 // 1. simply use it: web3 comes already defined
 web3
 
-// 2. optionally use web3 from Mist or load if outside of Mist
+// 2. optionally use web3 from Oystr or load if outside of Oystr
 if(typeof web3 === 'undefined')
   web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
-// 3. always use web3 provided by the dapp ("Web3" won't be supplied by Mist), but the provider from Mist
+// 3. always use web3 provided by the dapp ("Web3" won't be supplied by Oystr), but the provider from Oystr
 if(typeof web3 !== 'undefined')
   web3 = new Web3(web3.currentProvider);
 else
@@ -32,24 +32,24 @@ else
 ## API
 
 
-- [mist.platform](#mistplatform)
-- [mist.requestAccount](#mistrequestaccountcallback)(callback)
-- [mist.menu](#mistmenu)
-- [mist.menu.add](#mistmenuaddid-options-callback)([id,] options, callback)
-- [mist.menu.clear](#mistmenuclear)()
-- [mist.menu.remove](#mistmenuremoveid)(id)
-- [mist.menu.select](#mistmenuselectid)(text)
-- [mist.menu.setBadge](#mistmenusetbadgetext)(text)
-- [mist.menu.update](#mistmenuupdateid--options--callback)(id [, options] [, callback])
-- [mist.sounds](#mistsounds)
-- [mist.sounds.bip](#mistsoundsbip)()
-- [mist.sounds.bloop](#mistsoundsbloop)()
-- [mist.sounds.invite](#mistsoundsinvite)()
+- [oystr.platform](#oystrplatform)
+- [oystr.requestAccount](#oystrrequestaccountcallback)(callback)
+- [oystr.menu](#oystrmenu)
+- [oystr.menu.add](#oystrmenuaddid-options-callback)([id,] options, callback)
+- [oystr.menu.clear](#oystrmenuclear)()
+- [oystr.menu.remove](#oystrmenuremoveid)(id)
+- [oystr.menu.select](#oystrmenuselectid)(text)
+- [oystr.menu.setBadge](#oystrmenusetbadgetext)(text)
+- [oystr.menu.update](#oystrmenuupdateid--options--callback)(id [, options] [, callback])
+- [oystr.sounds](#oystrsounds)
+- [oystr.sounds.bip](#oystrsoundsbip)()
+- [oystr.sounds.bloop](#oystrsoundsbloop)()
+- [oystr.sounds.invite](#oystrsoundsinvite)()
 
 
-### mist.platform
+### oystr.platform
 
-Returns the current platform, mist is running on:
+Returns the current platform, oystr is running on:
 
 - `darwin` (Mac OSX)
 - `win32` (Windows)
@@ -58,7 +58,7 @@ Returns the current platform, mist is running on:
 
 ***
 
-### mist.requestAccount(callback)
+### oystr.requestAccount(callback)
 
 Asks the user to provide, or create a new account.
 
@@ -69,20 +69,20 @@ Asks the user to provide, or create a new account.
 #### Example
 
 ```js
-mist.requestAccount(function(e, address){
+oystr.requestAccount(function(e, address){
     console.log('Added new account', address);
 });
 ```
 
 ***
 
-### mist.menu
+### oystr.menu
 
 Provides functionality to control the sub menu of your dapp, when its add to the sidebar.
 
 ***
 
-### mist.menu.add([id,] options, callback)
+### oystr.menu.add([id,] options, callback)
 
 Adds/Updates a sub menu entry, which is placed below you dapp button in the sidebar.
 
@@ -99,13 +99,13 @@ Adds/Updates a sub menu entry, which is placed below you dapp button in the side
 #### Minimal example
 
 ```js
-mist.menu.add({name: 'My account'});
+oystr.menu.add({name: 'My account'});
 ```
 
 #### Full example
 
 ```js
-mist.menu.add('tkrzU', {
+oystr.menu.add('tkrzU', {
     name: 'My Meny Entry',
     badge: 50,
     position: 1,
@@ -122,7 +122,7 @@ mist.menu.add('tkrzU', {
 
 ***
 
-### mist.menu.clear()
+### oystr.menu.clear()
 
 Removes all sub menu entries. You can use this when you reload your app,
 to clear up wrong menu entries, which might got lost since the last session.
@@ -133,7 +133,7 @@ None
 
 ***
 
-### mist.menu.remove(id)
+### oystr.menu.remove(id)
 
 Removes a sub menu entry.
 
@@ -143,7 +143,7 @@ Removes a sub menu entry.
 
 ***
 
-### mist.menu.select(id)
+### oystr.menu.select(id)
 
 Selects the according sub menu entry.
 
@@ -153,7 +153,7 @@ Selects the according sub menu entry.
 
 ***
 
-### mist.menu.setBadge(text)
+### oystr.menu.setBadge(text)
 
 Sets the main badge of your dapp, right below your dapps menu button.
 
@@ -163,9 +163,9 @@ Sets the main badge of your dapp, right below your dapps menu button.
 
 ***
 
-### mist.menu.update(id, [, options] [, callback])
+### oystr.menu.update(id, [, options] [, callback])
 
-Works like `mist.menu.add()`, but all but the `id` parameters are optional.
+Works like `oystr.menu.add()`, but all but the `id` parameters are optional.
 
 #### Parameters
 
@@ -180,7 +180,7 @@ Works like `mist.menu.add()`, but all but the `id` parameters are optional.
 #### Example
 
 ```js
-mist.menu.update('tkrzU', {
+oystr.menu.update('tkrzU', {
     badge: 50,
     position: 2,
 })
@@ -188,13 +188,13 @@ mist.menu.update('tkrzU', {
 
 ***
 
-### mist.sounds
+### oystr.sounds
 
 Provides a list of sounds.
 
 ***
 
-### mist.sounds.bip()
+### oystr.sounds.bip()
 
 Makes a bip sound.
 
@@ -205,7 +205,7 @@ None
 ***
 
 
-### mist.sounds.bloop()
+### oystr.sounds.bloop()
 
 Makes a bloop sound.
 
@@ -215,7 +215,7 @@ None
 
 ***
 
-### mist.sounds.invite()
+### oystr.sounds.invite()
 
 Makes an invite sound.
 

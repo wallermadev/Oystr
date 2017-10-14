@@ -14,7 +14,7 @@ Number of blocks synchronized: 0
 Check the already existing issues to keep duplicates at a minimum.
 
 
-You'll find possible solutions for these common issues below on Mist Wiki: https://github.com/ethereum/mist/wiki.
+You'll find possible solutions for these common issues below on Mist Wiki: https://github.com/pirl/oystr/wiki.
 
 - Pirl is not shown in the wallet
 - I send pirl to the wallet contract but it doesn't show up

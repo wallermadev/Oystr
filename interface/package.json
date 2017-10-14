@@ -18,7 +18,7 @@
   "author": "Fabian Vogelsteller <fabian@ethereum.org>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ethereum/mist/issues"
+    "url": "https://github.com/pirl/oystr/issues"
   },
   "homepage": "https://github.com/ethereum/mist#readme",
   "dependencies": {
